@@ -1,0 +1,139 @@
+
+body{
+    margin: 0;
+    padding-top: 0%;
+    font-family: 'Kanit',
+        sans-serif;
+    
+    
+   
+}
+
+.bar{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 15vh;
+    background-color: #E0DECA;
+    box-shadow:10px 5px 15px #7F8487;
+    margin-bottom: 5%;
+}
+.maindiv{
+    text-align: center;
+    width: 60%;
+    height: 50vh;
+}
+.home{
+    text-align: center;
+    
+    
+}
+.head{
+    text-align: left;
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.text{
+    width:70%;
+    height: 30vh;
+    text-align: left;
+}
+.heading{
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 90%;
+    text-align: center;
+    padding-top: 2%;
+    
+}
+.col{
+    color: #7F8487;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+.col:hover{
+    color: #7F8487;
+}
+.options{
+    position:relative;
+    float: right;
+    width: 45%;
+    height: 90%;
+    
+}
+.ops{
+    display: inline-block;
+    width: 25%;
+    height: 90%;
+    margin-right: 2%;
+    text-align: center;
+    padding-top: 7%;
+    font-size: 1.43rem;
+    font-family: 'Varela Round', sans-serif;
+
+    color: #CC9C75;
+
+}
+.headingtext{
+    font-size: 3rem;
+    font-weight: 300;
+    
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+.plus{
+    position: relative;
+    float: right;
+    background-color:  #9EB23B;
+    font-size: 3rem;
+    border-radius: 50%;
+    width: 5%;
+    height: 5%;
+    text-align: center;
+}
+.plus:hover{
+    background-color:#34B3F1;
+}
+.para{
+    font-family: 'Roboto', sans-serif;
+    
+}
+@media only screen and (max-width: 1450px) {
+    .headingtext{
+        font-size: 1.7rem;
+    }
+    .heading{
+        text-align: center;
+        padding: 3%;
+
+    }
+    .options{
+        padding: 3%;
+    }
+    .ops{
+        margin-right: 4%;
+
+    }
+    .plus{
+        text-align:center;
+        font-size: 2rem;
+        float: none;
+        width:10%;
+
+        
+    }
+    .plush{
+        text-align: center;
+        position: relative;
+        margin-top: 45%;
+    }
+    .maindiv{
+        width: 70%;
+    }
+    .text{
+        width: 97%;
+    }
+}

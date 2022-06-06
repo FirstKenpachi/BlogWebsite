@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kanit:ital,wght@0,400;1,300&family=Koulen&family=Lobster&family=Press+Start+2P&family=Roboto:wght@100&family=Ubuntu:wght@700&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <div class=" container-fluid bar">
+        <div class="heading">
+            <p class="headingtext">BLOG WEBSITE</p>
+        </div>
+        <div class="options">
+            <div class="ops">
+                <a href="/" class="col">Home</a>
+
+            </div>
+            <div class="ops">
+                <a href="/" class="col" >About</a>
+            
+            </div>
+            <div class="ops">
+                <a href="/" class="col"><p class="col">Support</p></a>
+            
+            </div>
+        </div>
+
+        
+
+    </div>
+    
+    <div class="container-fluid maindiv">
+        <% if(Title==="main"){ %>
+            <div class="home">
+             <h1 class="head">Home</h1>
+             <p class="para"><%=Text%><a href="/home">Read More..</a></p>
+            </div>
+            <hr>
+            <div class="day1 home">
+              <h2 class="head">Day1</h2>
+              <p class="para"><%=Text1%><a href="/day1">Read More..</a></p>
+
+            </div>
+            <hr>
+            <div class="day2 home">
+              <h2 class="head">Day2</h2>
+             <p class="para"><%=Text2%><a href="/day2">Read More..</a></p>
+
+            </div>
+            <hr>
+            <% for (let j=0;j<RAY.length;j++){ %>
+                <% if(TitleNew!=undefined){ %>
+                  <div class="day2 home">
+                    <h2 class="head">
+                        <%=RAY[j]%>
+                    </h2>
+                    <p class="para">
+                        <%=Text3[j]%><a href="/new">Read More..</a>
+                    </p>
+                
+                  </div>
+                  <hr>
+
+            <% } %>
+
+            <% } %>
+            
+            
+            
+            
+        <%  }else if(Title==="home"){%>
+            <div class="home">
+                <h1 class="head">Home</h1>
+                <p class="para"><%=Text%></p>
+            </div>
+
+            <% }else if(Title==="day1"){ %>
+                <div class="day1 home">
+                 <h2 class="head">Day1</h2>
+                 <p class="para"><%=Text1%></p>
+
+                </div>
+
+            <% }else if(Title==="day2"){ %>
+                <div class="day2 home">
+                 <h2 class="head">Day2</h2>
+                 <p class="para"><%=Text2%></p>
+
+                </div>
+            <% }else if(Title!="compose" && Title!="day2"  && Title!="day1"  && Title!="main" ){ %>
+                <% for (let j=0;j<RAY.length;j++){ %>
+                  <div class="day2 home">
+                     <h2 class="head"><%=RAY[j]%></h2>
+                    <p class="para">
+                        <%=Text3[j+3]%>
+                    </p>
+            
+                  </div>
+                  <hr>
+                <%}%>
+
+            
+            
+              
+           <% }else if(Title==="compose"){ %>
+               <div class="compose home">
+                   <h2 class="head">Compose please:</h2>
+                   <form action="/compose" method="POST">
+                       <label><h3>Heading:</h3></label><br>
+                       <input type="text"  class="text" name="heading" placeholder="Enter Heading:"><br>
+                       <label><h3>Blog Details:</h3></label><br>    
+                       <input type="text" class="text" name="content" placeholder="Enter details please">
+                       <button class="btn btn-lg btn-dark">Submit</button>
+                   </form> 
+               </div>
+            <% } %>
+
+        
+    </div>
+    <div class="container-fluid plush ">
+        <form action="/compose" method="POST">
+            <button type="submit" class="btn btn-md plus">+</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
